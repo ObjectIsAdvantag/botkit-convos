@@ -85,6 +85,7 @@ module.exports = function (controller) {
             // Missed thread
             convo.addMessage("Time elapsed! you missed it, sorry.", "missed");
 
+            convo.activate();
         });
     });
 };

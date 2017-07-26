@@ -57,6 +57,8 @@ module.exports = function (controller) {
                     }
                 }
             ]);
+
+            convo.activate();
         });
     });
 };

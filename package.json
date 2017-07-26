@@ -1,6 +1,6 @@
 {
   "description": "BotKit conversation examples for Cisco Spark",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "main": "bot.js",
   "scripts": {
     "start": "node bot.js"

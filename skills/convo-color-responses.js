@@ -31,6 +31,8 @@ module.exports = function (controller) {
             convo.addMessage(
                 "I love the '{{responses.picked}}' color too!",
                 "success");
+
+            convo.activate();
         });
     });
 };

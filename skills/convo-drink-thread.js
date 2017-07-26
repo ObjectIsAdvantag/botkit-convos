@@ -47,6 +47,8 @@ module.exports = function (controller) {
                 convo.say('I love ' + response.text + ' too');
                 convo.next();
             }, {}, 'ask-drink');
+
+            convo.activate();
         });
     });
 };

@@ -61,6 +61,8 @@ module.exports = function (controller) {
                     // and now deliver cheese via tcp/ip...
                 }
             });
+
+            convo.activate();
         });
     });
 };
