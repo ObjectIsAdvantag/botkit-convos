@@ -13,11 +13,6 @@ module.exports = function (controller) {
     controller.hears(['variables'], 'direct_message,direct_mention', function (bot, message) {
 
         bot.createConversation(message, function (err, convo) {
-            convo.addQuestion('What would you like to drink?', function (response, convo) {
-                convo.say('I love ' + response.text + ' too');
-                convo.setVar('drink', response.text);
-                convo.next();
-            }, {}, 'ask-drink');
 
             convo.ask("What about coffee (yes/**no**/cancel)", [
                 {
@@ -51,7 +46,11 @@ module.exports = function (controller) {
                 }
             ]);
 
-            convo.activate();
+            convo.addQuestion('What would you like to drink?', function (response, convo) {
+                convo.say('I love ' + response.text + ' too');
+                convo.setVar('drink', response.text);
+                convo.next();
+            }, {}, 'ask-drink');
 
             convo.on('end', function (convo) {
                 if (convo.status == 'completed') {

@@ -33,8 +33,6 @@ module.exports = function (controller) {
                     convo.next();
                 }
             });
-
-            convo.activate();
         });
     });
 };

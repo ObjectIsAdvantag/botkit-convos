@@ -1,5 +1,5 @@
 //
-// drink: illustes mutiple threaded conversation
+// drink: illustrates mutiple threaded conversation
 //
 // Q: "What about coffee (yes / no / cancel)"
 // A: no
@@ -11,10 +11,6 @@ module.exports = function (controller) {
     controller.hears(['drink'], 'direct_message,direct_mention', function (bot, message) {
 
         bot.createConversation(message, function (err, convo) {
-            convo.addQuestion('What would you like to drink?', function (response, convo) {
-                convo.say('I love ' + response.text + ' too');
-                convo.next();
-            }, {}, 'ask-drink');
 
             convo.ask("What about coffee (yes/**no**/cancel)", [
                 {
@@ -47,7 +43,10 @@ module.exports = function (controller) {
                 }
             ]);
 
-            convo.activate();
+            convo.addQuestion('What would you like to drink?', function (response, convo) {
+                convo.say('I love ' + response.text + ' too');
+                convo.next();
+            }, {}, 'ask-drink');
         });
     });
 };

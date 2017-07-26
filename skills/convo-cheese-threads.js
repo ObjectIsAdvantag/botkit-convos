@@ -51,8 +51,6 @@ module.exports = function (controller) {
                 }
             ]);
 
-            convo.activate();
-
             // capture the results of the conversation and see what happened...
             convo.on('end', function (convo) {
 
