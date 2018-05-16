@@ -1,5 +1,5 @@
 //
-// coffee: example of a blocking conversation with yes/no options
+// coffee: example of a conversation with yes/no options
 //
 // "What about coffee (yes / no / cancel)"
 //
@@ -7,7 +7,7 @@ module.exports = function (controller) {
 
     controller.hears(['coffee'], 'direct_message,direct_mention', function (bot, message) {
 
-        bot.createConversation(message, function (err, convo) {
+        bot.startConversation(message, function (err, convo) {
 
             convo.ask("What about coffee (yes/no/cancel)", [
                 {
@@ -40,8 +40,6 @@ module.exports = function (controller) {
                     }
                 }
             ]);
-
-            convo.activate();
         });
     });
 };

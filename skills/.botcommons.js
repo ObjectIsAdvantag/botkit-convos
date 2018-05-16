@@ -9,7 +9,6 @@ module.exports = function (controller) {
             + '   "support"     : "' + bot.commons["support"] + '",\n'
             + '   "up-since"    : "' + bot.commons["up-since"] + '",\n'
             + '   "healthcheck" : "' + bot.commons["healthcheck"] + '",\n'
-            + '   "platform"    : "' + bot.commons["platform"] + '",\n'
             + '   "version"     : "' + bot.commons["version"] + '",\n'
             + '   "code"        : "' + bot.commons["code"] + '"\n'
             + '}\n';

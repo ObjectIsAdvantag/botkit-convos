@@ -14,8 +14,7 @@ module.exports = function (controller) {
                 convo.say('Cool, I like ' + response.text + ' too!');
                 convo.next();
             });
-
-            convo.activate();
         });
+
     });
 };

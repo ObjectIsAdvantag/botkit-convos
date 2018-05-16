@@ -8,7 +8,7 @@ module.exports = function (controller) {
 
     controller.hears(['cheese'], 'direct_message,direct_mention', function (bot, message) {
 
-        bot.createConversation(message, function (err, convo) {
+        bot.startConversation(message, function (err, convo) {
 
             // create a path for when a user says YES
             convo.addMessage({
@@ -61,8 +61,6 @@ module.exports = function (controller) {
                     // and now deliver cheese via tcp/ip...
                 }
             });
-
-            convo.activate();
         });
     });
 };

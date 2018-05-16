@@ -1,5 +1,5 @@
 //
-// timeout: shows how BotKit timeouts behave in a conversation
+// timeout: shows how Botkit timeouts behave in a conversation
 //
 // https://github.com/howdyai/botkit/blob/master/docs/readme.md#handling-conversation-timeouts
 //
@@ -7,7 +7,7 @@ module.exports = function (controller) {
 
     controller.hears(['timeout'], 'direct_message,direct_mention', function (bot, message) {
 
-        bot.createConversation(message, function (err, convo) {
+        bot.startConversation(message, function (err, convo) {
             convo.sayFirst("Then you're this kind of people that do not answer? let's check that...");
 
             convo.ask("What's your favorite color ?", function(response, convo) {
@@ -33,8 +33,6 @@ module.exports = function (controller) {
                     convo.next();
                 }
             });
-
-            convo.activate();
         });
     });
 };
