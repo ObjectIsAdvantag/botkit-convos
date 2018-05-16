@@ -1,6 +1,6 @@
 # Heroku deployment of the 'convos' bot
 
-This repo is an extract from the [Convos bot in the Botkit samples repo](https://github.com/CiscoDevNet/botkit-webex-samples).
+This repo is an extract of the ['convos' bot from the Botkit samples repo](https://github.com/CiscoDevNet/botkit-webex-samples/tree/master/convos).
 
 It is used to deploy the bot to Heroku, so that any Webex Teams user can experiment the code live by inviting `convos@sparkbot.io` join a Webex Teams space.
 
