@@ -1,7 +1,12 @@
 
+**1.3.2**
+   - migrated to new Botkit API: Botkit.webexbot(), config.access_token
+   - and new Webhook's targetUrl: "https://botkit-convos.herokuapp.com/webex/receive"
+
 **1.3.1**
    - testing Botkit rebrand updates ('non-breaking' branch): "github:ObjectIsAdvantag/botkit#non-breaking"
    - tip: `npm install --save ObjectIsAdvantag/botkit#non-breaking`
+   - Webhook's targetUrl: "https://botkit-convos.herokuapp.com/ciscospark/receive"
 
 **1.3.0**
    - changing to new 'convos' code in the Botkit samples (after Webex rebrand)

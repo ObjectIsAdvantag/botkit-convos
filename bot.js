@@ -36,10 +36,10 @@ if (!process.env.PUBLIC_URL) {
 
 var env = process.env.NODE_ENV || "development";
 
-var controller = Botkit.sparkbot({
+var controller = Botkit.webexbot({
     log: true,
     public_address: process.env.PUBLIC_URL,
-    ciscospark_access_token: accessToken,
+    access_token: accessToken,
     secret: process.env.SECRET, // this is a RECOMMENDED security setting that checks if incoming payloads originate from Webex
     webhook_name: process.env.WEBHOOK_NAME || ('built with BotKit (' + env + ')')
 });
