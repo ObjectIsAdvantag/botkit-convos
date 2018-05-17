@@ -15,6 +15,7 @@ module.exports = function (controller) {
         text += "\n- " + bot.enrichCommand(message, "variables") + ": threaded conversation with variables to store user choices";
         text += "\n- " + bot.enrichCommand(message, "responses") + ": threaded conversation where user responses are vehiculed via context";
         text += "\n- " + bot.enrichCommand(message, "quiz") + ": threaded conversation with timeout";
+        text += "\n- " + bot.enrichCommand(message, "storage") + ": store user preferences";
         text += "\n\nI also understand:";
         text += "\n- " + bot.enrichCommand(message, ".commons") + ": shows metadata about the bot";
         text += "\n- " + bot.enrichCommand(message, "help") + ": spreading the word about my skills";

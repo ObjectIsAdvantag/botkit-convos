@@ -1,3 +1,11 @@
+# Changes
+
+**1.4.0**
+    - fixed issues when 'convo.repeat()' needs a pre-pended message (several skills involved)
+    - fixed issue in 'timeout' skill
+    - added 'storage' skill to demo Botkit capability to store data (in-memory or to a backend)
+    - switch back to Botkit latest (v0.6.14) 
+    - tested also with "github:ObjectIsAdvantag/botkit#non-breaking"
 
 **1.3.2**
    - migrated to new Botkit API: Botkit.webexbot(), config.access_token

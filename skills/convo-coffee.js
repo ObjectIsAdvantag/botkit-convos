@@ -9,7 +9,7 @@ module.exports = function (controller) {
 
         bot.startConversation(message, function (err, convo) {
 
-            convo.ask("What about coffee (yes/no/cancel)", [
+            convo.ask("**What about coffee (yes/no/cancel)**", [
                 {
                     pattern: "yes|yeh|sure|oui|si",
                     callback: function (response, convo) {
