@@ -34,6 +34,13 @@ module.exports = function (controller) {
                 , {
                     default: true,
                     callback: function (response, convo) {
+                        // We've got 2 options at this point:
+
+                        // 1. simply repeat the question
+                        //convo.repeat();
+                        //convo.next();
+
+                        // 2. or provide extra info, then repeat the question
                         convo.gotoThread("bad_response");
                     }
                 }
@@ -41,8 +48,8 @@ module.exports = function (controller) {
 
             // Bad response
             convo.addMessage({
-                text: "Sorry, I did not understand.",
-                action: 'default',
+                text: "Sorry, I did not understand!<br/>_Tip: try 'yes', 'no' or 'cancel._'",
+                action: 'default', // goes back to the thread's current state, where the question is not answered
             }, 'bad_response');
         });
     });
