@@ -34,12 +34,16 @@ module.exports = function (controller) {
                 , {
                     default: true,
                     callback: function (response, convo) {
-                        convo.say("Sorry, I did not understand.");
-                        convo.repeat();
-                        convo.next();
+                        convo.gotoThread("bad_response");
                     }
                 }
             ]);
+
+            // Bad response
+            convo.addMessage({
+                text: "Sorry, I did not understand.",
+                action: 'default',
+            }, 'bad_response');
         });
     });
 };
